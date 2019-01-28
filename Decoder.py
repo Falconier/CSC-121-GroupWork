@@ -1,5 +1,6 @@
 ## decoder group activity
-
+## Filename: Decoder.py
+## Author('s): Jacob Emory Bullin
 import datetime
 def main():
     theMessage = input("What message do you want decode?")
