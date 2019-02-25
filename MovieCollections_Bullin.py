@@ -125,6 +125,7 @@ def findMovie(movieList):
 def migrate(movieList):
     yOn = input("ARE YOU SURE THAT YOU WANT TO MIGRATE INFORMAITON?\nThis will overwrite any data that currently exists!\n(y/n) :>> ").upper()
     if(yOn == "Y"):
+        ##region Important Stuff
         pckl = open("Movie Collection.data","ab")
         try:
             pckl.truncate(0)
@@ -132,6 +133,7 @@ def migrate(movieList):
             print("Migration Failed: Overwriting Failure")
 
         pckl.writable()
+        ##endregion
         for m in movieList:
             try:
                 pickle.dump(m,pckl)
